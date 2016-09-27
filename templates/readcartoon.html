@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh-ch">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>大脚虫漫画</title>
+    <script src="/static/js/jquery.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/css/my.css">
+    <link rel="shortcut icon" href="/static/img/logo.jpg" type="image/x-icon">
+</head>
+<body>
+     <nav class="navbar navbar-default navbar-fixed-top mynav" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <a href="#" class="navbar-brand navbar-title">大角虫漫画</a>
+            </div>
+
+        </div>
+    </nav>
+    <div class="containter mycontainer show">
+        {% for chapter in chapters %}
+            <img class="myimg" src="{{ chapter.image }}" alt="">
+        {% endfor %}
+    </div>
+</body>
+</html>
+
+

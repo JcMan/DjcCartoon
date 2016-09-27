@@ -9,4 +9,6 @@ urlpatterns = patterns('cartoon.views',
     url(r'^$', 'index'),
     url(r'^type/(\d+)$', 'cartoontype'),
     url(r'^type/(\d+)/(\d+)$', 'cartoontypeajax'),
+    url(r'^catalog/(\d+)$', 'catalog'),
+    url(r'^chapter/(\d+)$', 'chapter'),
 )

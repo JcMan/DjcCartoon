@@ -35,3 +35,25 @@ def getCartoons(type,start):
     }
     return result
 
+
+def getCatalogs(id):
+    url = 'http://dajiaochong.517w.com/dacu_app/get_chapter_info.php?id={id}&beginId=0'
+    url = url.replace('{id}', id)
+    result = requests.get(url).content
+    result = json.loads(result)['data']['chapter']
+    return result
+
+
+def getChapterImgs(cid):
+    url = 'http://dajiaochong.517w.com/dacu_app/get_chapter.php?cid={cid}'
+    url = url.replace("{cid}",cid)
+    result = requests.get(url).content
+    result = json.loads(result)['data']
+    for d in result:
+        d['image'] = 'http://cdn.517w.com/'+d['image']
+    return result
+
+
+
+
+
