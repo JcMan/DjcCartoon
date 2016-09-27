@@ -34,3 +34,12 @@ def chapter(req,cid):
     return render_to_response('readcartoon.html', {'chapters': imgs})
 
 
+def search(req):
+    logger = logging.getLogger('django')
+    if req.method == 'POST':
+        key = req.POST.getlist('key')[0]
+        result = HttpUtil.getSearchResult(key)
+        types = HttpUtil.getCartoonTypes()
+        return render_to_response('index.html', {'types': types, 'type': 0, 'cartoons': result})
+
+

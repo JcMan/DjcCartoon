@@ -54,6 +54,28 @@ def getChapterImgs(cid):
     return result
 
 
+def getSearchResult(key):
+    url = 'http://dajiaochong.517w.com/dacu_app/get_filter.php?type=0&str={key}&start=0&click=1'
+    url = url.replace("{key}", key)
+    result = json.loads(requests.get(url).content)
+    result = result['data']
+    try:
+        if len(result['data']) > 0:
+            for d in result['data']:
+                if len(d['description']) > 12:
+                    d['description'] = d['description'][0:12]+'...'
+                if len(d['description']) == 0:
+                    d['description'] = '暂无介绍...'
+                if len(d['title']) > 10:
+                    d['title'] = d['title'][0:10] + '...'
+                if len(d['update_chapter_name']) > 13:
+                    d['update_chapter_name'] = d['update_chapter_name'][0:13]+'...'
+                if len(d['update_chapter_name']) == 0:
+                    d['update_chapter_name'] = '暂无更新'
+    except :
+        pass
+    return result
+
 
 
 

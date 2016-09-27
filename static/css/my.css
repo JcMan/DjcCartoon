@@ -74,8 +74,10 @@ body{
     color: #555555;
 }
 .catalogcontent{
-    margin-left: 30%;
-    margin-right: 30%;
+    padding: 20px;
+    margin-left: 20%;
+    margin-right: 20%;
+    background: white;
 }
 
 .show{
@@ -85,4 +87,13 @@ body{
 }
 .myimg{
     width: 100%;
+}
+
+.catalogtitle{
+    text-decoration: none;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    color: #333;
 }

@@ -11,4 +11,5 @@ urlpatterns = patterns('cartoon.views',
     url(r'^type/(\d+)/(\d+)$', 'cartoontypeajax'),
     url(r'^catalog/(\d+)$', 'catalog'),
     url(r'^chapter/(\d+)$', 'chapter'),
+    url(r'^search/$', 'search'),
 )

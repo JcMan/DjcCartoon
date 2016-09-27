@@ -21,11 +21,12 @@
         </div>
     </nav>
     <div class="container mycontainer">
-        <div class="list-group catalogcontent">
+        <div class="row catalogcontent">
             {% for catalog in catalogs %}
-                <a target="_blank" href="/chapter/{{ catalog.cid }}" class="list-group-item">{{ catalog.name }}</a>
+                <div class="col-md-3 catalogtitle">
+                    <a target="_blank" href="/chapter/{{ catalog.cid }}" class="catalogtitle">{{ catalog.name }}</a>
+                </div>
             {% endfor %}
-
         </div>
     </div>
 </body>
