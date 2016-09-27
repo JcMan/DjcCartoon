@@ -1,10 +1,6 @@
 from django.shortcuts import render,render_to_response,HttpResponse
 from django.template import loader,Context
 from cartoon.util import HttpUtil
-import logging
-import json
-# Create your views here.
-
 
 def index(req):
     types = HttpUtil.getCartoonTypes()
@@ -18,6 +14,7 @@ def cartoontype(req,type):
     cartoons = HttpUtil.getCartoons(type, 0)
     return render_to_response('index.html', {'types': types, 'type': type, 'cartoons': cartoons})
 
+
 def cartoontypeajax(req,type,start):
     cartoons = HttpUtil.getCartoons(type, start)
     t = loader.get_template('cartoonitem.html')
@@ -29,13 +26,13 @@ def catalog(req,id):
     catalogs = HttpUtil.getCatalogs(id)
     return render_to_response('catalog.html', {'catalogs': catalogs})
 
+
 def chapter(req,cid):
     imgs = HttpUtil.getChapterImgs(cid)
     return render_to_response('readcartoon.html', {'chapters': imgs})
 
 
 def search(req):
-    logger = logging.getLogger('django')
     if req.method == 'POST':
         key = req.POST.getlist('key')[0]
         result = HttpUtil.getSearchResult(key)
