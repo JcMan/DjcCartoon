@@ -73,7 +73,7 @@ body{
 .cartoonupdatechapter{
     color: #555555;
 }
-.ctalogcontent{
+.catalogcontent{
     margin-left: 30%;
     margin-right: 30%;
 }
@@ -81,6 +81,7 @@ body{
 .show{
     margin-right: 20%;
     margin-left: 20%;
+    margin-bottom: 10%;
 }
 .myimg{
     width: 100%;
