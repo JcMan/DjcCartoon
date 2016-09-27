@@ -1,0 +1,70 @@
+.navbar-title{
+    color: #ffffff !important;
+}
+
+.navbar-item{
+    color: #ffffff !important;
+}
+.selected{
+    color: white !important;
+    background: #ff2853;
+    border-radius: 3px;
+    padding-right: 3px;
+    padding-left: 3px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+.mycontainer{
+    margin-top: 100px;
+
+}
+.cartoonpanel{
+    width: 80%;
+    margin-left: 30px;
+    float: right;
+}
+.tagpanel{
+    width: 15%;
+    float: left;
+    position: fixed;
+}
+.tagpanel a{
+    text-decoration: none;
+    color: #333;
+}
+.tagpanel a:hover{
+    background: #ff2853;
+    border-radius: 3px;
+    color: white;
+    padding-right: 3px;
+    padding-left: 3px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+.tag{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.cartoonimg{
+    width: 100%;
+    max-height: 263px;
+}
+.cartoondesc{
+    color: #cccccc;
+    font-size: 14px;
+}
+.cartoontitle{
+    padding-top: 10px;
+}
+.cartoontitle a{
+    color: #333333;
+    font-size: 12pt;
+    text-decoration: none;
+}
+.cartoonupdatechapter{
+    color: #555555;
+}

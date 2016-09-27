@@ -1,0 +1,10 @@
+{% for cartoon in cartoons.data %}
+    <div class="col-md-3" id="{{ cartoon.updatetime }}">
+        <a href="">
+            <img class="cartoonimg" src="{{ cartoon.thumb }}" alt="{{ cartoon.title }}">
+        </a>
+        <p class="cartoontitle"><a href="">{{ cartoon.title }}</a></p>
+        <p><span class="cartoondesc">{{ cartoon.description }}</span></p>
+        <p><span class="cartoonupdatechapter"> {{ cartoon.update_chapter_name }}</span></p>
+    </div>
+{% endfor %}
