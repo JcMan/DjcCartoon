@@ -33,10 +33,9 @@ def chapter(req,cid):
 
 
 def search(req):
-    if req.method == 'POST':
-        key = req.POST.getlist('key')[0]
-        result = HttpUtil.getSearchResult(key)
-        types = HttpUtil.getCartoonTypes()
-        return render_to_response('index.html', {'types': types, 'type': 0, 'cartoons': result})
+    key = req.POST.getlist('key')[0]
+    result = HttpUtil.getSearchResult(key)
+    types = HttpUtil.getCartoonTypes()
+    return render_to_response('index.html', {'types': types, 'type': 0, 'cartoons': result})
 
 
